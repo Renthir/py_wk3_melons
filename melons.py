@@ -27,19 +27,12 @@ with open("melons.csv", "r") as csvfile:
         melon_dict[row["melon_id"]] = melon
 
 
-# print(melon_dict)
-# print(melon_dict["anci"].price_str())
-
-
 def find_melon(melon_id):
     if melon_id in melon_dict:
         return melon_dict[melon_id]
     else:
         return "Sorry, no melon found!"
     
-# print(find_melon('anci'))
 
 def get_melons():
-    return melon_dict.items()
-
-# print(get_melons())
+    return list(melon_dict.values())

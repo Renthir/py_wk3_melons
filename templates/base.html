@@ -1,10 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Site</title>
+    <link rel="stylesheet" href="/static/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
-
 <body>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
         <div class="container-fluid">
@@ -15,10 +19,11 @@
             </div>
         </div>
     </nav>
-
+    <br>
   <div class="container">
 
     <!-- This is where the main content goes. -->
+
     {% block body %}
         BODY OF PAGE GOES HERE VIA INHERITANCE
     {% endblock %}
@@ -26,4 +31,3 @@
   </div>
 
 </body>
-</html>
