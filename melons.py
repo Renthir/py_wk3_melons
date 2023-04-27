@@ -28,10 +28,7 @@ with open("melons.csv", "r") as csvfile:
 
 
 def find_melon(melon_id):
-    if melon_id in melon_dict:
-        return melon_dict[melon_id]
-    else:
-        return "Sorry, no melon found!"
+    return melon_dict[melon_id]
     
 
 def get_melons():
