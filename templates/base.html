@@ -17,6 +17,11 @@
                 <div class="navbar-nav">
                     <a href="{{ url_for('all_melons') }}" class="nav-link">Melons</a>
                     <a href="{{ url_for('cart') }}" class="nav-link">Cart</a>
+                    {% if 'username' in session %}
+                    <a href="{{ url_for('logout')}}" class="nav-link">Log Out</a>
+                    {% else %}
+                    <a href="{{ url_for('login') }}" class="nav-link">Login</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
