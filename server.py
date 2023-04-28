@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, flash, request, session
 import jinja2
 import melons
+from forms import LoginForm
 
 
 app = Flask(__name__)
@@ -62,6 +63,10 @@ def empty_cart():
     session['cart'] = {}
     return redirect('/cart')
 
+@app.route('/login',  methods=['GET', 'POST'])
+def login():
+    form = LoginForm(request.form)
+    return render_template('login.html', form=form)
 
 if __name__ == "__main__":
     app.env = "development"
